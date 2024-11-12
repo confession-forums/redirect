@@ -1,0 +1,8 @@
+<body>
+    <script>
+        fetch('ip.txt')
+            .then(response => response.text())
+            .then(ip => window.location.href = `http://${ip.trim()}`)
+            .catch(error => alert('Failed to redirect.'));
+    </script>
+</body>
